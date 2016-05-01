@@ -38,30 +38,26 @@ class MyTableViewDataSource: NSObject, UITableViewDataSource {
         
         // set person, place or thing image
         switch item.happyType {
-        case 0:
-            cell.leftImage?.image = UIImage(named:"image_person")
-        case 1:
-            cell.leftImage?.image = UIImage(named:"image_place")
-        case 2:
-            cell.leftImage?.image = UIImage(named:"image_thing")
-        default:
-            cell.leftImage?.image = UIImage(named:"image_person") // default
+            case HappyType.Person:
+                cell.leftImage?.image = UIImage(named:"image_person")
+            case HappyType.Place:
+                cell.leftImage?.image = UIImage(named:"image_place")
+            case HappyType.Thing:
+                cell.leftImage?.image = UIImage(named:"image_thing")
         }
         
         // Display rating image
         switch item.rating! {
-        case 1:
-            cell.rightImage?.image = UIImage(named:"1_hearts")
-        case 2:
-            cell.rightImage?.image = UIImage(named:"2_hearts")
-        case 3:
-            cell.rightImage?.image = UIImage(named:"3_hearts")
-        case 4:
-            cell.rightImage?.image = UIImage(named:"4_hearts")
-        case 5:
-            cell.rightImage?.image = UIImage(named:"5_hearts")
-        default:
-            cell.rightImage?.image = UIImage(named:"1_hearts")
+            case HappyRating.OneHeart:
+                cell.rightImage?.image = UIImage(named:"1_hearts")
+            case HappyRating.TwoHearts:
+                cell.rightImage?.image = UIImage(named:"2_hearts")
+            case HappyRating.ThreeHearts:
+                cell.rightImage?.image = UIImage(named:"3_hearts")
+            case HappyRating.FourHearts:
+                cell.rightImage?.image = UIImage(named:"4_hearts")
+            case HappyRating.FiveHearts:
+                cell.rightImage?.image = UIImage(named:"5_hearts")
         }
 
         return cell

@@ -79,7 +79,7 @@
                                                 <connections>
                                                     <outlet property="happyDate" destination="nHq-vU-kyP" id="c7i-LJ-lq7"/>
                                                     <outlet property="happyName" destination="5PZ-sl-mX3" id="RxH-bS-pZU"/>
-                                                    <outlet property="leftImage" destination="OaB-Lo-p9N" id="ES2-Ks-nWk"/>
+                                                    <outlet property="leftImage" destination="OaB-Lo-p9N" id="fwt-8W-BXA"/>
                                                     <outlet property="rightImage" destination="DFD-l9-86U" id="BDZ-op-3rJ"/>
                                                 </connections>
                                             </tableViewCell>
