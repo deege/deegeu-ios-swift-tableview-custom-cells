@@ -1,11 +1,8 @@
-# deegeu-ios-swift-tableview-custom-cells
-
-
-# The Swift UITableView Tutorial
+# Creating a Custom UITableViewCell in Swift 2.0
 
 This code supplements the video "Creating a Custom UITableViewCell in Swift 2.0" where we create a Custom UITableViewCell in Swift for our table view in our iOS app.
 
-The “Creating a Custom UITableViewCell in Swift 2.0” video demonstrates creating customizing a UITableViewCell in Swift.
+The “Creating a Custom UITableViewCell in Swift 2.0” video demonstrates customizing a UITableViewCell in Swift.
 
 [![Creating a Custom UITableViewCell in Swift 2.0](http://img.youtube.com/vi/6bMDj0hoT9s/0.jpg)](http://www.youtube.com/watch?v=6bMDj0hoT9s)
 
