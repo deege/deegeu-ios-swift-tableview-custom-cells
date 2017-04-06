@@ -13,12 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let myDataSource = MyTableViewDataSource(happyThings: [
-        HappyThing(name: "Beer", date: NSDate(), happyType: .Thing, rating: .FourHearts),
-        HappyThing(name: "My kid", date: NSDate(), happyType: .Person, rating: .FiveHearts),
-        HappyThing(name: "YouTube subscribers", date: NSDate(), happyType: .Thing, rating: .ThreeHearts),
-        HappyThing(name: "Iceland", date: NSDate(), happyType: .Place, rating: .ThreeHearts),
-        HappyThing(name: "Colorado", date: NSDate(), happyType: .Place, rating: .FourHearts),
-        HappyThing(name: "Puppies", date: NSDate(), happyType: .Thing, rating: .OneHeart)],
+        HappyThing(name: "Beer", date: Date(), happyType: .thing, rating: .fourHearts),
+        HappyThing(name: "My kid", date: Date(), happyType: .person, rating: .fiveHearts),
+        HappyThing(name: "YouTube subscribers", date: Date(), happyType: .thing, rating: .threeHearts),
+        HappyThing(name: "Iceland", date: Date(), happyType: .place, rating: .threeHearts),
+        HappyThing(name: "Colorado", date: Date(), happyType: .place, rating: .fourHearts),
+        HappyThing(name: "Puppies", date: Date(), happyType: .thing, rating: .oneHeart)],
         cellIdentifier: "cell")
     let myDelegate = MyTableViewDelegate()
     

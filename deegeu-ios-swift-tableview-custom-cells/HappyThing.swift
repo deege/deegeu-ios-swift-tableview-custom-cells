@@ -9,26 +9,26 @@
 import UIKit
 
 enum HappyType {
-    case Person, Place, Thing
+    case person, place, thing
 }
 
 enum HappyRating {
-    case OneHeart, TwoHearts, ThreeHearts, FourHearts, FiveHearts
+    case oneHeart, twoHearts, threeHearts, fourHearts, fiveHearts
 }
 
 class HappyThing : NSObject {
     var name : String
-    var date : NSDate
+    var date : Date
     var rating: HappyRating?
     var happyType :HappyType
     
-    init(name: String!, date: NSDate!, happyType: HappyType!) {
+    init(name: String!, date: Date!, happyType: HappyType!) {
         self.date = date
         self.name = name
         self.happyType = happyType
     }
     
-    init(name: String!, date: NSDate!, happyType: HappyType!, rating: HappyRating!) {
+    init(name: String!, date: Date!, happyType: HappyType!, rating: HappyRating!) {
         self.date = date
         self.name = name
         self.happyType = happyType
