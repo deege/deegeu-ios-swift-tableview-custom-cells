@@ -1,4 +1,4 @@
-# Creating a Custom UITableViewCell in Swift 2.0
+# Creating a Custom UITableViewCell in Swift 3.1
 
 This code supplements the video "Creating a Custom UITableViewCell in Swift 2.0" where we create a Custom UITableViewCell in Swift for our table view in our iOS app.
 
@@ -7,7 +7,7 @@ The “Creating a Custom UITableViewCell in Swift 2.0” video demonstrates cust
 [![Creating a Custom UITableViewCell in Swift 2.0](http://img.youtube.com/vi/6bMDj0hoT9s/0.jpg)](http://www.youtube.com/watch?v=6bMDj0hoT9s)
 
 The video uses Swift 2.2 and iOS 9.3 on Xcode 7.3
-Source code updated to use Swift 3.1, iOS 10.3 on Xcode 8.3 (Updated 04-06-17)
+**Source code updated to use Swift 3.1, iOS 10.3 on Xcode 8.3 (Updated 04-06-17)**
 
 You can find more iOS videos on [the DeegeU channel](http://www.deegeu.com/subscribe)
 
