@@ -13,57 +13,57 @@ class MyTableViewDataSource: NSObject, UITableViewDataSource {
     var happyThings: [HappyThing]
     var cellIdentifier: String
     let header = "Happy Things"
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     
     init(happyThings: [HappyThing]!, cellIdentifier: String!) {
         self.happyThings = happyThings
         self.cellIdentifier = cellIdentifier
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateStyle = DateFormatter.Style.medium
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return happyThings.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyTableViewCell
         
         // Fetch Happy Item
         let item = happyThings[indexPath.row]
         
         // Configure Cell
-        cell.happyDate?.text = dateFormatter.stringFromDate(item.date)
+        cell.happyDate?.text = dateFormatter.string(from: item.date)
         cell.happyName?.text = (item.description)
         
         // set person, place or thing image
         switch item.happyType {
-            case HappyType.Person:
+            case HappyType.person:
                 cell.leftImage?.image = UIImage(named:"image_person")
-            case HappyType.Place:
+            case HappyType.place:
                 cell.leftImage?.image = UIImage(named:"image_place")
-            case HappyType.Thing:
+            case HappyType.thing:
                 cell.leftImage?.image = UIImage(named:"image_thing")
         }
         
         // Display rating image
         switch item.rating! {
-            case HappyRating.OneHeart:
+            case HappyRating.oneHeart:
                 cell.rightImage?.image = UIImage(named:"1_hearts")
-            case HappyRating.TwoHearts:
+            case HappyRating.twoHearts:
                 cell.rightImage?.image = UIImage(named:"2_hearts")
-            case HappyRating.ThreeHearts:
+            case HappyRating.threeHearts:
                 cell.rightImage?.image = UIImage(named:"3_hearts")
-            case HappyRating.FourHearts:
+            case HappyRating.fourHearts:
                 cell.rightImage?.image = UIImage(named:"4_hearts")
-            case HappyRating.FiveHearts:
+            case HappyRating.fiveHearts:
                 cell.rightImage?.image = UIImage(named:"5_hearts")
         }
 
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return header
     }
     
